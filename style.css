@@ -1,22 +1,18 @@
 body { 
-margin-left: 35px;
-margin-right: 35px;
-font-size: large;
 font-family: Arial, Helvetica, sans-serif;
 overflow-x: hidden;
 }
 img {margin: 15px;}
+
 header {
     background-color: #0faa;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 35px;
   }
   
   nav {
     display: flex;
-    max-width: 960px;
     width: 100%;
     justify-content: space-around;
     align-items: center;
@@ -41,17 +37,24 @@ article {display: flex;
     justify-content: center;
 }
    .img2 {max-width: 400px; max-height: 400px; width: 100%;}
+  
+   .ajuda {display: flex; justify-content: center;}
 
-   .voluntario {padding-left: 75px;}
+  #voluntario, #inscrever {font-size: larger; font-weight: bold;}
+  #voluntario:hover, #inscrever:hover {background-color: aliceblue; cursor: pointer; border: none;}
 
-   button {border: none; font: bold; font-size: large; background-color: black; color: aliceblue; padding: 10px;}
+
+   button {border-radius: 5px; font: bold; font-size: large; background-color: rgb(56, 48, 48); color: rgb(0, 0, 0); padding: 10px;}
+   button:hover {background-color: aliceblue; cursor: pointer;}
 
    footer {display: flex;   
     flex-direction: column;
     background-color: #0faa;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 
-header, footer {border-radius: 15px;}
+.margin { margin-left: 75px; margin-right: 75px;}
+footer, header {height: 75px;}
