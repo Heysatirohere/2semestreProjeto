@@ -1,8 +1,11 @@
 body { 
 font-family: Arial, Helvetica, sans-serif;
 overflow-x: hidden;
+margin: 0%;
 }
 img {margin: 15px;}
+
+.FECAP {display: flex; flex: start; width: 30%; height: 30%;}
 
 header {
     background-color: #0faa;
@@ -14,7 +17,7 @@ header {
   nav {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
 
@@ -38,7 +41,7 @@ article {display: flex;
 }
    .img2 {max-width: 400px; max-height: 400px; width: 100%;}
   
-   .ajuda {display: flex; justify-content: center;}
+   .ajuda {display: flex; justify-content: center; flex-wrap: nowrap;}
 
   #voluntario, #inscrever {font-size: larger; font-weight: bold;}
   #voluntario:hover, #inscrever:hover {background-color: aliceblue; cursor: pointer; border: none;}
@@ -58,3 +61,5 @@ article {display: flex;
 
 .margin { margin-left: 75px; margin-right: 75px;}
 footer, header {height: 75px;}
+a {text-decoration: none; color: black;}
+li:hover {background-color: blue; cursor: pointer;}
