@@ -47,9 +47,6 @@ article {display: flex;
   #voluntario:hover, #inscrever:hover {background-color: aliceblue; cursor: pointer; border: none;}
 
 
-   button {border-radius: 5px; font: bold; font-size: large; background-color: rgb(56, 48, 48); color: rgb(0, 0, 0); padding: 10px;}
-   button:hover {background-color: aliceblue; cursor: pointer;}
-
    footer {display: flex;   
     flex-direction: column;
     background-color: #0faa;
@@ -62,4 +59,39 @@ article {display: flex;
 .margin { margin-left: 75px; margin-right: 75px;}
 footer, header {height: 75px;}
 a {text-decoration: none; color: black;}
-li:hover {background-color: blue; cursor: pointer;}
+li:hover {cursor: pointer;}
+
+
+@media (min-width: 280px) and (max-width: 900px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .content-blocks {
+    display: flex;
+    margin: 0 2%;
+    gap: 2%;
+  }
+  
+  .container-content {
+    flex-direction: column;
+    display: flex;
+    flex: 1;
+  }
+  
+  .more-content {
+    background-color: rgb(206, 206, 206);
+  }
+
+
+  #img {
+    margin: 0 4%;
+  }
+
+  .content-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
