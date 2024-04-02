@@ -14,11 +14,15 @@ header {
     width: 100%;
   }
   
+  .mainFORM {margin: 95px;}
+
+
   nav {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
+    margin-left: auto;
   }
 
 #img {display: flex;
@@ -44,11 +48,8 @@ article {display: flex;
    .ajuda {display: flex; justify-content: center; flex-wrap: nowrap;}
 
   #voluntario, #inscrever {font-size: larger; font-weight: bold;}
-  #voluntario:hover, #inscrever:hover {background-color: aliceblue; cursor: pointer; border: none;}
+  #voluntario:hover, #inscrever:hover {text-decoration: underline; cursor: pointer; border: none;}
 
-
-   button {border-radius: 5px; font: bold; font-size: large; background-color: rgb(56, 48, 48); color: rgb(0, 0, 0); padding: 10px;}
-   button:hover {background-color: aliceblue; cursor: pointer;}
 
    footer {display: flex;   
     flex-direction: column;
@@ -62,4 +63,12 @@ article {display: flex;
 .margin { margin-left: 75px; margin-right: 75px;}
 footer, header {height: 75px;}
 a {text-decoration: none; color: black;}
-li:hover {background-color: blue; cursor: pointer;}
+li:hover { cursor: pointer;}
+
+.mainFORM {display: flex; justify-content: center;}
+
+.form-group {width: 100%;}
+
+.buttonForm {border-radius: 5px; background-color: #0faa;}
+.buttonForm a {text-decoration: none; color: black;}
+.marginButton {margin-top: 7px;}
