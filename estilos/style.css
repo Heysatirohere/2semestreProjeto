@@ -14,11 +14,15 @@ header {
     width: 100%;
   }
   
+  .mainFORM {margin: 95px;}
+
+
   nav {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
+    margin-left: auto;
   }
 
 #img {display: flex;
@@ -44,7 +48,7 @@ article {display: flex;
    .ajuda {display: flex; justify-content: center; flex-wrap: nowrap;}
 
   #voluntario, #inscrever {font-size: larger; font-weight: bold;}
-  #voluntario:hover, #inscrever:hover {background-color: aliceblue; cursor: pointer; border: none;}
+  #voluntario:hover, #inscrever:hover {text-decoration: underline; cursor: pointer; border: none;}
 
 
    footer {display: flex;   
@@ -53,14 +57,28 @@ article {display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-
-.margin { margin-left: 75px; margin-right: 75px;}
-footer, header {height: 75px;}
-a {text-decoration: none; color: black;}
-li:hover {cursor: pointer;}
-
+  }
+  
+  
+  .margin { margin-left: 75px; margin-right: 75px;}
+  footer, header {height: 75px;}
+  a {text-decoration: none; color: black;}
+  li:hover { cursor: pointer;}
+  
+  .mainFORM {display: flex; justify-content: center;} 
+  
+  .mainFORM2 {display: flex; align-items: center; flex-direction: column; margin-top: 5%; background-color: rgb(94, 101, 105);} 
+  
+  .form-group {width: 100%;}
+  
+  .buttonForm {border-radius: 5px; background-color: #0faa;}
+  .buttonForm a {text-decoration: none; color: black;}
+  .marginButton {margin-top: 7px;}
+  
+  .form-check {width: 300px; margin-top: 7px;}
+  .form-check-label {background-color: aquamarine;}
+  
+  #word, #powerpoint, #excel {border-radius: 0;}
 
 @media (min-width: 280px) and (max-width: 900px) {
   * {
