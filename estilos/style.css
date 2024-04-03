@@ -96,12 +96,35 @@ article {display: flex;
     flex-direction: column;
     display: flex;
     flex: 1;
+    background-color: white;
   }
   
   .more-content {
     background-color: rgb(206, 206, 206);
+    margin: 8px;
+    height: 16vh;
   }
 
+  .voluntary-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .imagen-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 20% 20% 20% 0;
+  }
+
+  .imagen-container img {
+    flex-shrink: 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
 
   #img {
     margin: 0 4%;
