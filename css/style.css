@@ -13,6 +13,8 @@ margin: 0%;
   height: 30%;
   }
 
+#body-main {background: #34495e; color: beige;}
+
 header {
     background-color: #0faa;
     display: flex;
@@ -31,12 +33,15 @@ header {
     margin-left: auto;
   }
 
-#img {
+img {
 display: flex;
 justify-content: center;
 background-size: cover;
+max-width: 800px;
+max-height: 800px;
+width: auto;
+height: auto;
 }
-#img img {width: 100%; max-width: 1024px; max-height: 524px;}
 
 li {list-style: none;}
 
@@ -46,17 +51,10 @@ justify-content: space-around;
 margin: 15px;
 }
 
-article {display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+main {
+  display: flex;
+  margin: 20px;
 }
-   .img2 {max-width: 400px; max-height: 400px; width: 100%;}
-  
-   .ajuda {display: flex; justify-content: center; flex-wrap: nowrap;}
-
-  #voluntario, #inscrever {font-size: larger; font-weight: bold;}
-  #voluntario:hover, #inscrever:hover {text-decoration: underline; cursor: pointer; border: none;}
-
 
    footer {
     display: flex;   
@@ -80,66 +78,11 @@ article {display: flex;
   .buttonForm {border-radius: 5px; background-color: #0faa;}
   .buttonForm a {text-decoration: none; color: black;}
   .marginButton {margin-top: 7px;}
-  .h3-margin {margin: 7px;}
+  .h3-margin {margin-top: 7px;}
   .form-check {font-size: large;}
-
- 
-
-
-
-@media (min-width: 280px) and (max-width: 900px) {
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
-  .content-blocks {
-    display: flex;
-    margin: 0 2%;
-    gap: 2%;
-  }
   
-  .container-content {
-    flex-direction: column;
-    display: flex;
-    flex: 1;
-    background-color: white;
-  }
-  
-  .more-content {
-    background-color: rgb(206, 206, 206);
-    margin: 8px;
-    height: 16vh;
-  }
 
-  .voluntary-content {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
 
-  .imagen-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    overflow: hidden;
-    padding: 20% 20% 20% 0;
-  }
 
-  .imagen-container img {
-    flex-shrink: 0;
-    max-width: 30%;
-    max-height: 100%;
-  }
 
-  #img {
-    margin: 0 4%;
-  }
 
-  .content-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-}
