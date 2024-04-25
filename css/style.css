@@ -19,6 +19,7 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
+    background-color: #0faa;
   }
   
   .mainFORM {margin: 95px;}
@@ -63,7 +64,10 @@ main {
     background-color: #0faa;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
   }
 
   .margin { margin-left: 75px; margin-right: 75px;}
@@ -81,9 +85,3 @@ main {
   .marginButton {margin-top: 7px;}
   .h3-margin {margin-top: 7px;}
   .form-check {font-size: large;}
-  
-
-
-
-
-
