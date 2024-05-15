@@ -2,15 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const BodyContainer = styled.body`
-    margin: 5%;
+    margin: 8%;
 `;
 
 const Main = styled.main`
-padding: 5px
+padding: 12px;
 `;
 
 const Div = styled.div `
 display:flex;
+
 `;
 
 function Body() {

@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CadBody = styled.cad;
 
-function Cad() {
 
-return(
-    <CadBody>
-       
-    </CadBody>
-);
-    }
+function CadastroBody() {
 
-export default Cad; 
+    return (
+    <form>
+        
+    </form>
+    )
+}
+
+export default CadastroBody;
