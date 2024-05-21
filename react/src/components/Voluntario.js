@@ -8,9 +8,8 @@ const FormContainer = styled.div`
   align-items: center;
   padding: 80px;
   background-color: #f9f9f9;
-  border-radius: 10px;
+  border-radius: 14px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
   margin-top: 20px;
   margin-bottom: 20px;
 `;
@@ -60,16 +59,16 @@ function CadastroBody() {
         <h2>Cadastro</h2>
         <Form>
           <Label htmlFor="nome">Nome Completo</Label>
-          <Input type="text" id="nome" name="nome" required />
+          <Input maxLength="40" type="text" id="nome" name="nome" required />
 
           <Label htmlFor="email">Email</Label>
-          <Input type="email" id="email" name="email" required />
+          <Input maxLength="40" type="email" id="email" name="email" required />
 
           <Label htmlFor="telefone">Telefone</Label>
-          <Input type="tel" id="telefone" name="telefone" required />
+          <Input maxLength="12" type="tel" id="telefone" name="telefone" required />
 
           <Label htmlFor="cpf">CPF</Label>
-          <Input type="text" id="cpf" name="cpf" required />
+          <Input maxLength="10" type="text" id="cpf" name="cpf" required />
 
           <Button type="submit">Cadastrar</Button>
         </Form>
