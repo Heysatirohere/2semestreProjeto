@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import Axios from "axios";
 
-// Definindo os estilos para os componentes do formulário
 const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -53,24 +53,46 @@ const Main = styled.main`
 `;
 
 function CadastroBody() {
+
+  const [values, setValues] = useState({});
+
+  const handleChangeValues = (value) => {
+    setValues((prevValue) => ({
+      ...prevValue, [value.target.name]: value.target.value,
+    }));
+  };
+
+  const handleClickButton = (e) => {
+    e.preventDefault(); // Evitar o comportamento padrão do botão de formulário
+
+    Axios.post("http://localhost:3001/registro", {
+      nome: values.nome,
+      email: values.email,
+      telefone: values.telefone,
+    }).then((response) => {
+      console.log(response);
+      alert("Dados inseridos com sucesso");
+    }).catch((error) => {
+      console.error("Erro ao enviar os dados:", error);
+      alert("Erro ao inserir dados");
+    });
+  };
+
   return (
     <Main>
       <FormContainer>
         <h2>Cadastro</h2>
         <Form>
           <Label htmlFor="nome">Nome Completo</Label>
-          <Input maxLength="40" type="text" id="nome" name="nome" required />
+          <Input maxLength="40" type="text" id="nome" name="nome" required onChange={handleChangeValues} />
 
           <Label htmlFor="email">Email</Label>
-          <Input maxLength="40" type="email" id="email" name="email" required />
+          <Input maxLength="40" type="email" id="email" name="email" required onChange={handleChangeValues} />
 
           <Label htmlFor="telefone">Telefone</Label>
-          <Input maxLength="12" type="tel" id="telefone" name="telefone" required />
+          <Input maxLength="12" type="tel" id="telefone" name="telefone" required onChange={handleChangeValues} />
 
-          <Label htmlFor="cpf">CPF</Label>
-          <Input maxLength="10" type="text" id="cpf" name="cpf" required />
-
-          <Button type="submit">Cadastrar</Button>
+          <Button onClick={handleClickButton}>Cadastrar</Button>
         </Form>
       </FormContainer>
     </Main>

@@ -8,13 +8,13 @@ const FooterContainer = styled.footer`
   padding: 2em;
   color: #fff;
   list-style: none;
-  width: 100%;
+
 `;
 
 const FooterItem = styled.li`
   flex: 1;
   text-align: center;
-  min-width: 150px;
+
   margin: 0.5em 0;
 `;
 
