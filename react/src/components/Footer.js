@@ -8,7 +8,11 @@ const FooterContainer = styled.footer`
   padding: 2em;
   color: #fff;
   list-style: none;
+<<<<<<< HEAD
 
+=======
+  width: auto;
+>>>>>>> fdf6e210b2d0c573e6c722ac680db7e6becac62f
 `;
 
 const FooterItem = styled.li`
