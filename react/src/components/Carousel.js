@@ -2,8 +2,8 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import {Carousel} from 'react-responsive-carousel'
 import fecapCarousel from '../assets/imgCarousel/fecap.png'
-import image2 from '../assets/imgCarousel/img3.jpg'
-import image3 from '../assets/imgCarousel/img2.jpg'
+import image2 from '../assets/img3.png'
+import image3 from '../assets/img2.png'
 import styled from "styled-components";
 
 const cardEdit = styled.div `
