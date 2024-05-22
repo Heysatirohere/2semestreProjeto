@@ -4,15 +4,16 @@ import Home from './pages/Home';
 import Cadastro from './pages/Cadastro';
 
 
+
 import GlobalStyles from './styles/GlobalStyle';
 
 function App() {
   return (
     <Router>
-      <GlobalStyles/>
+      <GlobalStyles />
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/Cadastro" element={<Cadastro />}/>
+        <Route path="/" element={<Home/>} />
+        <Route path="/Cadastro" element={<Cadastro />} />
       </Routes>
     </Router>
   );

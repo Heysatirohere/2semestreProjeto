@@ -8,7 +8,7 @@ const FooterContainer = styled.footer`
   padding: 2em;
   color: #fff;
   list-style: none;
-  width: 100%;
+  width: auto;
 `;
 
 const FooterItem = styled.li`

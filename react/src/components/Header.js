@@ -10,6 +10,7 @@ const HeaderContainer = styled.header`
     color: #fff;
     font-weight: bold;
     padding: 10px 20px;
+    width: auto;
 `;
 
 function Header(){
