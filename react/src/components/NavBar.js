@@ -17,6 +17,13 @@ const StyledLink = styled(Link)`
     }
 `;
 
+const ContainerCadastroVoluntary = styled.div `
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-left: 300px;
+`;
+
 const Voluntary = styled(Link) `
     color: #0def7d;
     text-decoration: none;
@@ -45,12 +52,16 @@ const CadastroButton = styled(Link) `
     }
 `;
 
+
+
 function NavBar(){
     return(
         <NavBarContainer>
             <StyledLink to="/">Home</StyledLink>
-            <CadastroButton to={"/Cadastro"}>Cadastrar</CadastroButton>
-            <Voluntary>Seja Voluntário</Voluntary>
+            <ContainerCadastroVoluntary>
+                <CadastroButton to={"/Cadastro"}>Cadastrar</CadastroButton>
+                <Voluntary to={"/"}>Seja Voluntário</Voluntary>
+            </ContainerCadastroVoluntary>
         </NavBarContainer>
     );
 }

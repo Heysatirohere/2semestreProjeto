@@ -13,18 +13,35 @@ const cardEdit = styled.div `
     margin-left: 150px;
 `;
 
+const CarouselContainer = styled.div`
+    width: 100%;
+    max-width: 800px; /* Adjust the max width as needed */
+    margin: 0 auto;
+    padding: 20px 0;
+`
+
+const Image = styled.img `
+    width: 60%;
+    height: auto;
+`;
+
+
 const HomeCarousel = () => {
-    <Carousel autoPlay interval={2000} infiniteLoop showThumbs={false}>
-        <cardEdit>
-            <img src={fecapCarousel} alt={""} />
-        </cardEdit>
-        <cardEdit>
-            <img src={image2} alt={""} />
-        </cardEdit>
-        <cardEdit>
-            <img src={image3} alt={""} />
-        </cardEdit>
-    </Carousel>
+    return (
+    <CarouselContainer>
+        <Carousel autoPlay interval={2000} infiniteLoop showThumbs={false} style = {("height: 40%;")}>
+            <cardEdit>
+                <Image src={fecapCarousel} alt={""} />
+            </cardEdit>
+            <cardEdit>
+                <Image src={image2} alt={""} />
+            </cardEdit>
+            <cardEdit>
+                <Image src={image3} alt={""} />
+            </cardEdit>
+        </Carousel>
+    </CarouselContainer>
+    )
 }
 
 export default HomeCarousel;

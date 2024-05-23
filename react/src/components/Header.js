@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
 import styled from 'styled-components';
+import LogoContainer from '../components/logo';
 
 
 const HeaderContainer = styled.header`
@@ -16,6 +17,7 @@ const HeaderContainer = styled.header`
 function Header(){
     return(
         <HeaderContainer>
+            <LogoContainer/>
             <NavBar/>
         </HeaderContainer>
     );
