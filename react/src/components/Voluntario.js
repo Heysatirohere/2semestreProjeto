@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Axios from "axios";
+import BackGound from "../assets/bg.png";
 
 const FormContainer = styled.div`
   display: flex;
@@ -50,6 +51,7 @@ const Main = styled.main`
   display: flex;
   justify-content: center;
   width: 100%;
+  height: auto;
 `;
 
 function CadastroBody() {
@@ -80,6 +82,7 @@ function CadastroBody() {
 
   return (
     <Main>
+      
       <FormContainer>
         <h2>Cadastro</h2>
         <Form>

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import FirstImage from "../assets/texto1.png";
-import SecondImage from "../assets/texto2.png";
+import FirstImage from "../assets/texto3.png";
+import SecondImage from "../assets/texto4.png";
 import { Link } from 'react-router-dom';
 
 const ContentContainer = styled.div`
@@ -104,12 +104,12 @@ const KnowMore = styled(Link)`
     }
 `;
 
-const MainContent = () => {
+const Section = () => {
     return (
         <ContentContainer>
             <TrainingContainer>
                 <TiltleContainer>
-                    <Title>Capacitação Tecnológica</Title>
+                    <Title>Aprendizado e inclusão</Title>
                 </TiltleContainer>
                 <WrapperContainer>
                     <ImageContainer>
@@ -117,7 +117,7 @@ const MainContent = () => {
                     </ImageContainer>
                     <ParagraphContainer>
                         <Paragraph>
-                            O Conexão FECAP é uma iniciativa dedicada a capacitar os funcionários da nossa instituição no uso de tecnologia. Com o apoio de alunos voluntários, oferecemos cursos de informática básica para ajudar nossos colaboradores a expandirem seus conhecimentos e habilidades, promovendo seu crescimento profissional.
+                            A falta de habilidades em informática pode limitar as oportunidades de muitos. O Conexão FECAP surge para mudar isso, oferecendo cursos práticos em Excel, Word, PowerPoint e mais. Com o apoio de nossos alunos voluntários, estamos determinados a capacitar nossos funcionários, ampliando suas perspectivas de carreira e promovendo um ambiente de aprendizagem inclusivo.
                         </Paragraph>
                         <KnowMoreContainer>
                             <KnowMore to={"/"}>Saiba Mais</KnowMore>
@@ -127,7 +127,7 @@ const MainContent = () => {
             </TrainingContainer>
             <TrainingContainer>
                 <TiltleContainer>
-                    <Title>Oportunidades de Crescimento</Title>
+                    <Title>Transformação Digital</Title>
                 </TiltleContainer>
                 <WrapperContainerReverse>
                     <ImageContainer>
@@ -135,7 +135,7 @@ const MainContent = () => {
                     </ImageContainer>
                     <ParagraphContainer>
                         <Paragraph>
-                            Este projeto visa preencher a lacuna de conhecimento tecnológico entre os funcionários de níveis mais baixos da FECAP. Ao capacitar esses colaboradores, proporcionamos a eles a oportunidade de competir por vagas melhores, tanto dentro quanto fora da instituição. Os alunos voluntários, por sua vez, são recompensados com horas complementares por sua dedicação.
+                            O projeto Conexão FECAP tem como objetivo principal capacitar nossos colaboradores no uso de ferramentas tecnológicas essenciais. Com uma abordagem prática e metodologias eficazes, buscamos empoderar os funcionários, incentivando o desenvolvimento profissional e abrindo portas para novas oportunidades. Junte-se a nós nessa jornada de aprendizado e crescimento!  
                         </Paragraph>
                         <KnowMoreContainerReverse>
                             <KnowMore to={"/"}>Saiba Mais</KnowMore>
@@ -147,4 +147,4 @@ const MainContent = () => {
     )
 }
 
-export default MainContent;
+export default Section;

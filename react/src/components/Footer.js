@@ -12,7 +12,7 @@ const FooterContainer = styled.footer`
 const FooterItem = styled.li`
   flex: 1;
   text-align: center;
-
+  
   margin: 0.5em 0;
 `;
 

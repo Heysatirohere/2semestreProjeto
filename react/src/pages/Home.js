@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import HomeCarousel from '../components/Carousel';
 import MainContent from '../components/Main';
 import ContentVolunterArea from '../components/VolunteerArea';
+import Section from '../components/Section';
 
 
 function Home(){
@@ -13,6 +14,7 @@ function Home(){
             <HomeCarousel/>
             <MainContent/>
             <ContentVolunterArea/>
+            <Section/>
             <Footer/>
 
         </div>

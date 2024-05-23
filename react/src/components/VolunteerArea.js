@@ -1,41 +1,202 @@
 import React from "react";
 import styled from "styled-components";
-import ImageVolunteer from "../assets/imageVoluntario.png"
+import '../FontsStyle.css';
 
-const Input = styled.input`
-  margin-bottom: 1em;
-  padding: 0.5em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+const ContentContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0def7d87;
+    padding: 20px;
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 `;
 
+const WrapperContainer = styled.div`
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 4%;
+    gap: 2.5%;
+
+    @media (min-width: 768px) {
+
+        flex-direction: row;
+    }
+`;
+
+const ImageContainer = styled.div`
+    width: 100%;
+    height: auto;
+    padding: 0px 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4%;
+
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+`;
+
+const TextContainer = styled.div`
+    text-align: center;
+    margin: 2% 0px -2% 0px;
+`;
+
+const SubTitle = styled.div`
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+`;
+
+const Paragraph = styled.p`
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+`;
+
+const InfoTextArea = styled.div`
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+`;
+
+const SubParagraph = styled.p`
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    text-align: justify;
+`;
+
+const ContainerForm = styled.div`
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 2% 0px;
+    padding: 0 4%;
+
+    @media (min-width: 768px) {
+        width: 50%;
+        justify-content: flex-start;
+        padding-right: 4%;
+    }
+`;
+
+const Form = styled.form`
+    background-color: #EED9C4;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+`;
+
+const Label = styled.label`
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin: 0px 0px 1% 0%;
+`;
+
+const Input = styled.input`
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 81%;
+`;
+
+const TextArea = styled.textarea`
+    height: 100%;
+    max-height: 400px;
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 2%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: #202020;
+    background-color: #ffff;
+    border: none;
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+    scroll-behavior: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+`;
+
+const ButtonContainer = styled.div`
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+`;
+
+const Button = styled.button`
+    background-color: #0def7d;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #f2f2f2;
+    padding: 0.8em;
+    border: #0def7d solid 1px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        color: #0def7d;
+        background-color: #f2f2f2;
+        border-radius: 4px;
+    }
+
+    @media (min-width: 768px) {
+        width: 20%;
+    }
+`;
 
 const ContentVolunterArea = () => {
     return (
-        <div>
-            <div>
-                <img src={ImageVolunteer} alt={""} />
-            </div>
-            <div>
-                <h2> Seja Voluntario </h2>
-                <p>Garanta horas complementares</p>
-            </div>
-            <div>
-                <form action="/submit" method="POST">
-                    <label for="name">Nome:</label>
-                    <Input maxLength="40" type="text" id="nome" name="nome"/>
+        <ContentContainer id="VolunterArea">
+            <WrapperContainer>
+                <ImageContainer>
+                    <TextContainer>
+                        <SubTitle> Seja Voluntário </SubTitle>
+                        <Paragraph>Garanta horas complementares</Paragraph>
+                    </TextContainer>
+                    <InfoTextArea>
+                        <SubParagraph>Você sabia que ser voluntário pode trazer inúmeros benefícios pessoais e profissionais? Além de ajudar a comunidade e desenvolver habilidades valiosas, o voluntariado pode contar como horas complementares para a sua formação acadêmica. Venha descobrir como você pode transformar seu tempo livre em uma experiência enriquecedora e vantajosa!</SubParagraph>
+                    </InfoTextArea>
+                </ImageContainer>
+                <ContainerForm>
+                    <Form action="/submit" method="POST">
+                        <Label htmlFor="name">Nome:</Label>
+                        <Input maxLength="40" type="text" id="nome" name="nome" placeholder="Marcelo Henrique de Souza" />
 
-                    <label for="email">Email:</label>
-                    <Input maxLength="40" type="email" id="email" name="email"/>
+                        <Label htmlFor="email">Email:</Label>
+                        <Input maxLength="40" type="email" id="email" name="email" placeholder="voluntary@gmail.com" />
 
-                    <label for="message">Mensagem:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                        <Label htmlFor="message">Suas Experiências:</Label>
+                        <TextArea id="message" name="message" rows="4" placeholder="Descrição" required></TextArea>
 
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </div>
+                        <ButtonContainer><Button type="submit">Enviar</Button></ButtonContainer>
+                    </Form>
+                </ContainerForm>
+            </WrapperContainer>
+        </ContentContainer>
     );
 }
 
-            export default ContentVolunterArea;
+export default ContentVolunterArea;

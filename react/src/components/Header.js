@@ -12,6 +12,7 @@ const HeaderContainer = styled.header`
     font-weight: bold;
     padding: 10px 20px;
     width: auto;
+    border-bottom: 1px solid #0def7d;
 `;
 
 function Header(){

@@ -7,7 +7,6 @@ function Cadastro(){
         <div>
             <Header/>
             <CadastroBody/>
-            <Footer/>
         </div>
     );
 }

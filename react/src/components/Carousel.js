@@ -6,8 +6,8 @@ import image2 from '../assets/img3.png'
 import image3 from '../assets/img2.png'
 import styled from "styled-components";
 
-const cardEdit = styled.div `
-    width: 60%;
+const CardEdit = styled.div `
+    width: 80%;
     padding: 0 50px;
     margin-top: 2em;
     margin-left: 150px;
@@ -15,21 +15,23 @@ const cardEdit = styled.div `
 
 const CarouselContainer = styled.div`
     width: 100%;
-    max-width: 800px; /* Adjust the max width as needed */
+    max-width: 1000px; 
     margin: 0 auto;
     padding: 20px 0;
 `
 
 const Image = styled.img `
-    width: 60%;
+    width: 100%;
     height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
 `;
 
 
 const HomeCarousel = () => {
     return (
     <CarouselContainer>
-        <Carousel autoPlay interval={2000} infiniteLoop showThumbs={false} style = {("height: 40%;")}>
+        <Carousel autoPlay interval={4000} infiniteLoop showThumbs={false} style = {("height: 40%;")}>
             <cardEdit>
                 <Image src={fecapCarousel} alt={""} />
             </cardEdit>
