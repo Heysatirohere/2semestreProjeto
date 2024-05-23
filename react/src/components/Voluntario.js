@@ -67,6 +67,13 @@ function CadastroBody() {
   const handleClickButton = (e) => {
     e.preventDefault(); 
 
+    const telefone = values.telefone;
+  
+    if (!/^\d{11}$/.test(telefone)) {
+      alert ("Este campo precisa conter 11 dígitos")
+      return;
+    }
+
     Axios.post("http://localhost:3001/registro", {
       nome: values.nome,
       email: values.email,
@@ -79,6 +86,8 @@ function CadastroBody() {
       alert("Erro ao inserir dados");
     });
   };
+
+
 
   return (
     <Main>
@@ -93,7 +102,7 @@ function CadastroBody() {
           <Input maxLength="40" type="email" id="email" name="email" required onChange={handleChangeValues} />
 
           <Label htmlFor="telefone">Telefone</Label>
-          <Input maxLength="11" type="tel" onKeyPress ={(event) => {
+          <Input  maxLength="11" type="tel" onKeyPress ={(event) => {
               if (!/[0-9]/.test(event.key)) {
           event.preventDefault();
           } 
