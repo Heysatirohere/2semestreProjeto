@@ -63,7 +63,7 @@ function CadastroBody() {
   };
 
   const handleClickButton = (e) => {
-    e.preventDefault(); // Evitar o comportamento padrão do botão de formulário
+    e.preventDefault(); 
 
     Axios.post("http://localhost:3001/registro", {
       nome: values.nome,
@@ -90,7 +90,11 @@ function CadastroBody() {
           <Input maxLength="40" type="email" id="email" name="email" required onChange={handleChangeValues} />
 
           <Label htmlFor="telefone">Telefone</Label>
-          <Input maxLength="12" type="tel" id="telefone" name="telefone" required onChange={handleChangeValues} />
+          <Input maxLength="11" type="tel" onKeyPress ={(event) => {
+              if (!/[0-9]/.test(event.key)) {
+          event.preventDefault();
+          } 
+            }} id="telefone" name="telefone" required onChange={handleChangeValues} />
 
           <Button onClick={handleClickButton}>Cadastrar</Button>
         </Form>
