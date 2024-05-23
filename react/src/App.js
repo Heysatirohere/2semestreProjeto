@@ -2,9 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Cadastro from './pages/Cadastro';
-
-
-
+import './FontsStyle.css'
 import GlobalStyles from './styles/GlobalStyle';
 
 function App() {
