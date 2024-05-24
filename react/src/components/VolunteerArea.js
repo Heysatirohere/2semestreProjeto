@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
+import axios from "axios";
 import '../FontsStyle.css';
 
 const ContentContainer = styled.div`
@@ -167,7 +168,37 @@ const Button = styled.button`
     }
 `;
 
+
 const ContentVolunterArea = () => {
+
+    const [formData, setFormData] = useState({
+        nome: "",
+        email: "",
+        message: ""
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        axios.post("http://localhost:3001/registro/voluntario", formData)
+            .then(response => {
+                console.log(response.data);
+                alert("Dados inseridos com sucesso");
+            })
+            .catch(error => {
+                console.error("Erro ao enviar os dados:", error);
+                alert("Erro ao inserir dados");
+            });
+    };
+
+
     return (
         <ContentContainer id="VolunterArea">
             <WrapperContainer>
@@ -182,16 +213,16 @@ const ContentVolunterArea = () => {
                 </ImageContainer>
                 <ContainerForm>
                     <Form action="/submit" method="POST">
-                        <Label htmlFor="name">Nome:</Label>
-                        <Input maxLength="40" type="text" id="nome" name="nome" placeholder="Marcelo Henrique de Souza" />
+                        <Label htmlFor="nome">Nome Completo</Label>
+                        <Input maxLength="40" type="text" id="nome" name="nome" required onChange={handleChange} />
 
-                        <Label htmlFor="email">Email:</Label>
-                        <Input maxLength="40" type="email" id="email" name="email" placeholder="voluntary@gmail.com" />
+                        <Label htmlFor="email">Email</Label>
+                        <Input maxLength="40" type="email" id="email" name="email" required onChange={handleChange} />
 
-                        <Label htmlFor="message">Suas Experiências:</Label>
-                        <TextArea id="message" name="message" rows="4" placeholder="Descrição" required></TextArea>
+                        <Label htmlFor="YourExperience">Suas experiências</Label>
+                        <TextArea type="text" id="message" name="message" required onChange={handleChange} />
 
-                        <ButtonContainer><Button type="submit">Enviar</Button></ButtonContainer>
+                        <Button onClick={handleSubmit}>Cadastrar</Button>
                     </Form>
                 </ContainerForm>
             </WrapperContainer>

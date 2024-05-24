@@ -54,8 +54,7 @@ const Main = styled.main`
   height: auto;
 `;
 
-function CadastroBody() {
-
+function AlunoForm() {
   const [values, setValues] = useState({});
 
   const handleChangeValues = (value) => {
@@ -65,16 +64,16 @@ function CadastroBody() {
   };
 
   const handleClickButton = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
     const telefone = values.telefone;
   
     if (!/^\d{11}$/.test(telefone)) {
-      alert ("Este campo precisa conter 11 dígitos")
+      alert("Este campo precisa conter 11 dígitos");
       return;
     }
 
-    Axios.post("http://localhost:3001/registro", {
+    Axios.post("http://localhost:3001/registro/padrao", {
       nome: values.nome,
       email: values.email,
       telefone: values.telefone,
@@ -87,11 +86,8 @@ function CadastroBody() {
     });
   };
 
-
-
   return (
     <Main>
-      
       <FormContainer>
         <h2>Cadastro</h2>
         <Form>
@@ -102,11 +98,11 @@ function CadastroBody() {
           <Input maxLength="40" type="email" id="email" name="email" required onChange={handleChangeValues} />
 
           <Label htmlFor="telefone">Telefone</Label>
-          <Input  maxLength="11" type="tel" onKeyPress ={(event) => {
-              if (!/[0-9]/.test(event.key)) {
-          event.preventDefault();
-          } 
-            }} id="telefone" name="telefone" required onChange={handleChangeValues} />
+          <Input maxLength="11" type="tel" onKeyPress={(event) => {
+            if (!/[0-9]/.test(event.key)) {
+              event.preventDefault();
+            }
+          }} id="telefone" name="telefone" required onChange={handleChangeValues} />
 
           <Button onClick={handleClickButton}>Cadastrar</Button>
         </Form>
@@ -115,4 +111,4 @@ function CadastroBody() {
   );
 }
 
-export default CadastroBody;
+export default AlunoForm;
