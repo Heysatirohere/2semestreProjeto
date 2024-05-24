@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './Header';
 import FooterFromAbout from './FooterFromAbout';
-import fecapCarousel from '../assets/DSC_0990.JPG';
+import fecapCarousel from '../assets/sobreimage.png';
 
 const PageContainer = styled.div`
   display: flex;
@@ -28,6 +28,7 @@ const Image = styled.img`
   height: auto;
   border-radius: 4px;
   margin-bottom: 20px;
+  max-height: 50%;
 `;
 
 const HomeLink = styled(Link)`

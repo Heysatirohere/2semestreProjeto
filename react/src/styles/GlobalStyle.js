@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import bgImage from '../assets/bg.png'
+
 
 const GlobalStyles = createGlobalStyle`
     body{
@@ -7,7 +7,19 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         color: #333;
     }
-    
-`;
 
+    ::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #0def7d87;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #0def7d;
+        border-radius: 4px;
+        height: auto;
+  }
+`;
 export default GlobalStyles;

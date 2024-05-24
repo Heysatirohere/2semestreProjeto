@@ -76,34 +76,6 @@ const Paragraph = styled.p`
     text-align: justify;
 `;
 
-const KnowMoreContainer = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-`;
-
-const KnowMoreContainerReverse = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: start;
-`;
-
-const KnowMore = styled(Link)`
-    background-color: #0def7d;
-    color: #f2f2f2;
-    padding: .8em;
-    border: #0def7d solid 1px;
-    border-radius: 4px;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-    &:hover{
-        color: #0def7d;
-        background-color: #f2f2f2;
-        border-radius: 4px; 
-    }
-`;
-
 const MainContent = () => {
     return (
         <ContentContainer>
@@ -119,9 +91,6 @@ const MainContent = () => {
                         <Paragraph>
                             O Conexão FECAP é uma iniciativa dedicada a capacitar os funcionários da nossa instituição no uso de tecnologia. Com o apoio de alunos voluntários, oferecemos cursos de informática básica para ajudar nossos colaboradores a expandirem seus conhecimentos e habilidades, promovendo seu crescimento profissional.
                         </Paragraph>
-                        <KnowMoreContainer>
-                            <KnowMore to={"/"}>Saiba Mais</KnowMore>
-                        </KnowMoreContainer>
                     </ParagraphContainer>
                 </WrapperContainer>
             </TrainingContainer>
@@ -137,9 +106,6 @@ const MainContent = () => {
                         <Paragraph>
                             Este projeto visa preencher a lacuna de conhecimento tecnológico entre os funcionários de níveis mais baixos da FECAP. Ao capacitar esses colaboradores, proporcionamos a eles a oportunidade de competir por vagas melhores, tanto dentro quanto fora da instituição. Os alunos voluntários, por sua vez, são recompensados com horas complementares por sua dedicação.
                         </Paragraph>
-                        <KnowMoreContainerReverse>
-                            <KnowMore to={"/"}>Saiba Mais</KnowMore>
-                        </KnowMoreContainerReverse> 
                     </ParagraphContainer>
                 </WrapperContainerReverse>
             </TrainingContainer>

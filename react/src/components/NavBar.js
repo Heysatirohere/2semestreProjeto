@@ -44,7 +44,7 @@ const ContainerCadastroVoluntary = styled.div`
     }
 `;
 
-const Voluntary = styled(Link)`
+const Voluntary = styled.a`
     color: #0def7d;
     text-decoration: none;
     padding: .8em;
@@ -89,11 +89,11 @@ function NavBar() {
         <NavBarContainer>
             <SimpleLinkedContainer>
                 <StyledLink  to="/">Home</StyledLink>
-                <StyledLink to="/Sobre">Sobre</StyledLink>
+                <StyledLink to="/Sobre">Saiba Mais</StyledLink>
             </SimpleLinkedContainer>
             <ContainerCadastroVoluntary>
                 <CadastroButton to="/Cadastro">Cadastrar</CadastroButton>
-                <Voluntary to="/">Seja Voluntário</Voluntary>
+                <Voluntary href="#volunter">Seja Voluntário</Voluntary>
             </ContainerCadastroVoluntary>
         </NavBarContainer>
     );
