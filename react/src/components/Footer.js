@@ -40,14 +40,12 @@ const LinksEmail = styled(Link) `
   }
 `;
 
-
-
 function Footer() {
   return (
     <FooterContainer>
-      <FooterItem>Telefone: +55 (11) 95217-4000</FooterItem>
+      <FooterItem>Telefone: +55 11 95217-4000</FooterItem>
       <FooterItem>Email:<LinksEmail href="david.lemes@fecap.br"> david.lemes@fecap.br</LinksEmail></FooterItem>
-      <FooterItem><Links href="https://www.fecap.br/" target='_blank'>Site FECAP</Links></FooterItem>
+      <FooterItem><Links href="https://www.fecap.br/"  target='_blank'>Site FECAP</Links></FooterItem>
     </FooterContainer>
   );
 }
